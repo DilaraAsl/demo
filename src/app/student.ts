@@ -80,9 +80,112 @@ export class Student {
             
         }
         
+        loopsInTypeScript(): void{
+
+            // for loop
+
+            for (let i=0; i<3; i++){
+                console.log(i);
+            }
+
+            // forEach loop
+            let arr: number[] = [10, 20, 30, 40];
+            for(let val of arr){
+
+                val+=10;
+                console.log(val);
+
+                let i=2;
+                while(i<4){
+                    console.log('something');
+                    i++;
+                }
+
+                var x=2;
+                do{
+                    console.log('Do while block is executing');
+                    x++;
+                }
+                while(x<4)
+
+
+
+            }
+
+        }
+
+        ifElseStatementsInTypeScript(): void {
+            let x=10, y=20;
+            if (x>y){}
+            else if(x<y) {}
+            else if(x==y) {}
+            else {}
+            
+
+        }
           
     }
+    enum DAYS{
 
+        SUNDAY, MONDAY, TUESDAY
+    }
 
+    class IEmployee{
+       
+         constructor(public id: number, public name: string) {
+            
+        }
+    }
 
+    let student= new Student();
+    student.name='Joe';
+    // in java we can create a new student in main method
+    // in ts you can create a new object any where 
+
+    
+
+    class Employee extends IEmployee {
+       constructor(id:number,name:string,public address:string){
+        super(id,name);
+       }
+    
+       
+    }
+    
+    // Create an instance of the Employee class
+    const emp = new Employee(1, "John Doe","234 somewhere street");
+    
+    // Access the properties defined in the interface
+    console.log(emp.id);    // Output: 1
+    console.log(emp.name);
+    console.log(emp.address);  // Output: John Doe
+
+    class Animal {
+        constructor(public name: string) {
+        }
+    
+        makeSound() {
+            console.log(`${this.name} makes a sound`);
+        }
+    }
+    
+    class Dog extends Animal {
+        constructor(name: string, public breed: string) {
+            super(name); // Call the constructor of the parent class (Animal)
+        }
+    
+        override makeSound() {
+            super.makeSound(); // Call the makeSound method of the parent class
+            console.log(`${this.name} barks`);
+        }
+    
+        showInfo() {
+            console.log(`${this.name} is a ${this.breed} dog`);
+        }
+    }
+    
+    const myDog = new Dog("Buddy", "Golden Retriever");
+    myDog.makeSound(); // Output: Buddy makes a sound\nBuddy barks
+    myDog.showInfo();  // Output: Buddy is a Golden Retriever dog
+    
 
