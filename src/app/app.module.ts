@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './demo/first/first.component';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
+import { LeftComponent } from './left/left/left.component';
+import { RightComponent } from './right/right/right.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    LeftComponent,
+    RightComponent
   ],
   imports: [
     BrowserModule
