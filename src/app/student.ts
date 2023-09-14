@@ -187,5 +187,18 @@ export class Student {
     const myDog = new Dog("Buddy", "Golden Retriever");
     myDog.makeSound(); // Output: Buddy makes a sound\nBuddy barks
     myDog.showInfo();  // Output: Buddy is a Golden Retriever dog
+// JSON - JS Object Notation 
+    // let newDog: Dog={name: "Biscuit",breed: "Yorkshire",makeSound(){},showInfo(){}};
+   
+    let newDog: Dog = {
+        name: "Biscuit",
+        breed: "Yorkshire",
+        makeSound: () => {
+            // Implementation of makeSound method here
+        },
+        showInfo: () => {
+            // Implementation of showInfo method here
+        }
+    };
     
 
